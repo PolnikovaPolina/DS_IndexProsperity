@@ -85,7 +85,6 @@ problem = {
                 (minValue.iloc[16], maxValue.iloc[16])] # Межі для кожного параметра
 }
 
-param1 = Indexs17.sample(n = 5000, replace = True, random_state=2).values
 param = saltelli.sample(problem, 1024)
 si = sobol.analyze(problem, model(param))
 print('Sobol First-Order Indices:', si['S1'])  # Показники чутливості за Соболем першого порядку
